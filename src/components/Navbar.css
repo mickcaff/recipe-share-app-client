@@ -1,0 +1,127 @@
+/* NavBar Styling */
+.nav-div{
+    color: var(--navlinks1);
+    background-color: white;
+    font-family: Inter, sans-serif;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .nav-title-heading{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Noto Serif Georgian", serif;
+    margin-left: 2rem;
+    height: 28px !important;
+    width: 200px;
+  }
+  .fa-spoon{
+    display: inline-block;
+    rotate: -45deg;
+  }
+  .nav-signin-div {
+    display: none;
+  }
+  .nav-burger-div {
+    display: block;
+    color: var(--navlinks1);
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+  }
+  .nav-links-container {
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    text-align: right;
+    transition: all 0.2s linear;
+  }
+  .nav-links-text {
+    padding: 0 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-page {
+    margin-bottom: 1.5rem;
+  }
+  .nav-link-text{
+    color: var(--navlinks1);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .nav-link-text:visited{
+    color: var(--navlinks1);
+  }
+  .nav-div .active {
+    color: var(--navlinks2);
+  }
+  .nav-signin-burger-div {
+    margin-right: 2rem;
+  }
+  .nav-link-text.btn {
+    background-color: var(--primary2);
+    color: var(--navlinks1);
+    text-decoration: none;
+    border: 1px solid var(--navlinks1);
+    border-radius: 3px;
+    font-weight: 700;
+    padding: 0.8rem 1rem;
+    margin-left: 2rem;
+  }
+  .nav-user-icon, .nav-signout-icon{
+    position: relative;
+  }
+  .fa-circle-user, .fa-right-from-bracket{
+    color: var(--navlinks1);
+    padding-left: 1.5rem;
+  }
+  .nav-user-text, .nav-signout-text {
+    background-color: var(--navlinks1);
+    color: white;
+    border-radius: 6px;
+    padding: 6px 12px;
+    position: absolute;
+  }
+  .nav-user-text {
+    left: -110px;
+    bottom: -6px;
+  }
+  .nav-signout-text {
+    left: 10px;
+    bottom: -70px;
+  }
+
+  @media (min-width: 900px) {
+    .nav-links-container {
+        position: relative;
+        top: 0;
+        height: auto !important;
+        width: max-content;
+        transition: none;
+    }
+      .nav-links-text {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .nav-page{
+        padding-right: 4rem;
+        margin: 0;
+    }
+    .nav-page:last-of-type{
+        padding-right: 0;
+    }
+    .nav-signin-div {
+        display: block;
+    }
+    .nav-burger-div {
+        display: none;
+    }
+  }

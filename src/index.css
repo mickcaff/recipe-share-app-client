@@ -1,0 +1,23 @@
+:root {
+  --primary1: #165246;
+  --primary2: #1C6758;
+  --primary3: #3D8361;
+  --primary4: #D6CDA4;
+  --primary5: #EEF2E6;
+}
+
+body {
+  background-color: white;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */

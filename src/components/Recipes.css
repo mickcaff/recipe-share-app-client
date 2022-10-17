@@ -1,0 +1,67 @@
+/* Recipes Page Styling */
+.recipes-main {
+    color: var(--primary1);
+  }
+  .recipes-title-div {
+    color: var(--oc-slate-7);
+    background-color: var(--oc-yellow-1);
+    padding: 15% 8% 15%;
+  }
+  .recipes-title-text {
+    width: 100%;
+  }
+  .recipes-title-text h1 {
+    font-family: "Noto Serif Georgian";
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  .recipes-title-text p {
+    font-size: 1.3rem;
+  }
+  .recipes-search-div {
+    margin: 3rem 8%;
+    text-align: center;
+    position: relative;
+  }
+  .recipes-search-div input {
+    color: var(--oc-slate-4);
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: "Noto Serif Georgian";
+    font-size: 1.5rem;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .recipes-search-div i {
+    color: var(--oc-slate-5);
+    position: absolute;
+    top: 20px;
+    right: 5px;
+  }
+  .recipe-grid-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0 8%;
+  }
+  .recipe-individual {
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  @media (min-width: 900px) {
+    .recipes-title-div {
+        padding: 100px 100px 80px;
+    }
+    .recipes-title-text {
+        width: 50%;
+    }
+    .recipes-title-text h1 {
+        font-size: 3.5rem;
+      }
+    .recipes-title-text p {
+        font-size: 1.5rem;
+      }
+  }
