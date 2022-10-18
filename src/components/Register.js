@@ -54,7 +54,7 @@ function Register() {
         <div className="register-div">
           <div className="register-content-div">
             <h1 className="nav-title-heading">
-              <i className="fa-solid fa-spoon"></i> RecipePro
+              <i className="fa-solid fa-spoon"></i> RecipeShare
             </h1>
             <h1 className="heading-register">Create your account</h1>
             <form className="register-form">

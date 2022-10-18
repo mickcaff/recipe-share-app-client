@@ -32,7 +32,7 @@ function Navbar() {
   return (
     <nav className="nav-div">
       <h1 className="nav-title-heading">
-        <i className="fa-solid fa-spoon"></i> RecipeJournal
+        <i className="fa-solid fa-spoon"></i> RecipeShare
       </h1>
 
       <div className="nav-links-container" ref={linksContainerRef}>

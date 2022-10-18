@@ -76,7 +76,7 @@ function SignIn() {
         <div className="signup-div">
           <div className="signup-content-div">
             <h1 className="nav-title-heading">
-              <i className="fa-solid fa-spoon"></i> RecipePro
+              <i className="fa-solid fa-spoon"></i> RecipeShare
             </h1>
             <h1 className="heading-signup">Log in to your account</h1>
             <form className="signup-form">

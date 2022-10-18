@@ -80,7 +80,7 @@ function Account() {
             <h1>
               Hi there, {currentUser.firstName} {currentUser.lastName}!
             </h1>
-            <p>Thanks for using RecipePro since {userSignUpDate}</p>
+            <p>Thanks for using RecipeShare since {userSignUpDate}</p>
           </div>
           <button onClick={handleSignOut}>
             Sign out <i class="fa-solid fa-arrow-right-from-bracket"></i>

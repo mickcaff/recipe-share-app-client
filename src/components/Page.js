@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 function Page(props) {
   useEffect(() => {
-    document.title = `${props.title} | RecipePro`;
+    document.title = `${props.title} | RecipeShare`;
     window.scrollTo(0, 0);
   }, []);
 
