@@ -17,7 +17,7 @@ function SignIn() {
 
   const getUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5500/api/users");
+      const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users`);
       setUsers(res.data);
     } catch (err) {
       console.log(err);

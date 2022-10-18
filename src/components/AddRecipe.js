@@ -103,7 +103,7 @@ function AddRecipe() {
   async function saveData(e) {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5500/api/recipe", {
+      const res = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/recipe`, {
         title: formData.title,
         category: formData.category,
         serves: formData.serves,

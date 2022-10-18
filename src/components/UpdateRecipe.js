@@ -111,7 +111,7 @@ function UpdateRecipe() {
   async function getData(e) {
     try {
       const res = await axios.get(
-        `http://localhost:5500/api/recipe/${recipeToBeUpdated}`
+        `${process.env.REACT_APP_SERVER_URL}/api/recipe/${recipeToBeUpdated}`
       );
       setFormData(res.data);
     } catch (e) {
@@ -123,7 +123,7 @@ function UpdateRecipe() {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:5500/api/recipe/${recipeToBeUpdated}`,
+        `${process.env.REACT_APP_SERVER_URL}/api/recipe/${recipeToBeUpdated}`,
         {
           title: formData.title,
           category: formData.category,

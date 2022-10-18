@@ -28,7 +28,7 @@ function Register() {
   async function addUser(e) {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5500/api/user", {
+      const res = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/user`, {
         email: userRegistration.email,
         firstName: userRegistration.firstName,
         lastName: userRegistration.lastName,

@@ -14,7 +14,7 @@ function Recipes() {
   const getRecipes = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5500/api/recipes?user=${user}`
+        `${process.env.REACT_APP_SERVER_URL}/api/recipes?user=${user}`
       );
       setRecipes(res.data);
     } catch (e) {

@@ -11,7 +11,7 @@ function TodoList() {
   const addItem = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5500/todo/item", {
+      const res = await axios.post(`${process.env.REACT_APP_SERVER_URL}/todo/item`, {
         item: itemText,
       });
       setListItems((prev) => [...prev, res.data]);
@@ -25,7 +25,7 @@ function TodoList() {
   useEffect(() => {
     const getItemsList = async () => {
       try {
-        const res = await axios.get("http://localhost:5500/todo/items");
+        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/todo/items`);
         setListItems(res.data);
         console.log("render");
       } catch (err) {
@@ -38,7 +38,7 @@ function TodoList() {
   //Delete Item
   const deleteItem = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5500/todo/item/${id}`);
+      const res = await axios.delete(`${process.env.REACT_APP_SERVER_URL}/todo/item/${id}`);
       const newListItem = listItems.filter((item) => item._id !== id);
       setListItems(newListItem);
       console.log(res);
@@ -52,7 +52,7 @@ function TodoList() {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:5500/todo/item/${isUpdating}`,
+        `${process.env.REACT_APP_SERVER_URL}/todo/item/${isUpdating}`,
         { item: updateItemText }
       );
       console.log(res.data);

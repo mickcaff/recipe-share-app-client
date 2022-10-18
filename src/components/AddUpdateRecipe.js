@@ -118,7 +118,7 @@ function AddRecipe() {
   async function getData(e) {
     try {
       const res = await axios.get(
-        `http://localhost:5500/api/recipe/${recipeToBeUpdated}`
+        `${process.env.REACT_APP_SERVER_URL}/api/recipe/${recipeToBeUpdated}`
       );
       setFormData(res.data);
     } catch (e) {
@@ -130,7 +130,7 @@ function AddRecipe() {
   async function saveData(e) {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5500/api/recipe", {
+      const res = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/recipe`, {
         title: formData.title,
         ingredients: formData.ingredients,
         method: formData.method,
@@ -148,7 +148,7 @@ function AddRecipe() {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:5500/api/recipe/${recipeToBeUpdated}`,
+        `${process.env.REACT_APP_SERVER_URL}/api/recipe/${recipeToBeUpdated}`,
         {
           title: formData.title,
           ingredients: formData.ingredients,

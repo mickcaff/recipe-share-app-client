@@ -11,10 +11,12 @@ function Recipes() {
   const [searchedRecipes, setSearchedRecipes] = useState(recipes);
   const [searchBar, setSearchBar] = useState("");
 
+  const useDeployed = true
+
   const getRecipes = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5500/api/recipes?public=true"
+        `${process.env.REACT_APP_SERVER_URL}/api/recipes?public=true`
       );
       setRecipes(res.data);
     } catch (e) {
