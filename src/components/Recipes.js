@@ -23,13 +23,17 @@ function Recipes() {
 
   const filterRecipes = () => {
     return recipes.filter((recipe) => {
-      return recipe.title.toLowerCase().includes(searchBar);
+      return recipe.title.toLowerCase().includes(searchBar.toLowerCase());
     });
   };
 
   useEffect(() => {
     getRecipes();
   }, []);
+
+  useEffect(() => {
+    setSearchedRecipes(filterRecipes());
+  }, [recipes]);
 
   useEffect(() => {
     setSearchedRecipes(filterRecipes());
@@ -74,9 +78,11 @@ function Recipes() {
                   );
                 })}
               </ul>
-              {recipe.method.map((item) => {
-                return <div>{item.step}</div>;
-              })}
+              <ul>
+                {recipe.method.map((item) => {
+                  return <li>{item.step}</li>;
+                })}
+              </ul>
             </div>
           );
         })}

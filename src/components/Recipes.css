@@ -44,11 +44,22 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    padding: 0 8%;
+    padding: 0 8% 8%;
   }
   .recipe-individual {
     border: 1px solid black;
+    border-radius: 8px;
     cursor: pointer;
+  }
+  .recipe-individual h3 {
+    margin: 6px;
+  }
+  .recipe-individual h4 {
+    margin: 6px;
+  }
+  .recipe-individual ul {
+    list-style: none;
+    margin: 6px;
   }
 
   @media (min-width: 900px) {
