@@ -1,17 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { UseGlobalContext } from "./utils/context";
-import { NavLink, useNavigate } from "react-router-dom";
+// import { UseGlobalContext } from "./utils/context";
+import { useNavigate } from "react-router-dom";
 
 function Recipes() {
   const navigate = useNavigate();
-  const { currentUser } = UseGlobalContext();
-  const { firstName } = currentUser;
+  // const { currentUser } = UseGlobalContext();
   const [recipes, setRecipes] = useState([]);
   const [searchedRecipes, setSearchedRecipes] = useState(recipes);
   const [searchBar, setSearchBar] = useState("");
-
-  const useDeployed = true
 
   const getRecipes = async () => {
     try {
@@ -61,7 +58,10 @@ function Recipes() {
       <div className="recipe-grid-div">
         {searchedRecipes.map((recipe) => {
           return (
-            <div className="recipe-individual" onClick={()=>navigate(`/${recipe._id}`)}>
+            <div
+              className="recipe-individual"
+              onClick={() => navigate(`/${recipe._id}`)}
+            >
               <h3>{recipe.title}</h3>
               <h4>Servings: {recipe.serves}</h4>
               <h4>Categories: {recipe.categories}</h4>

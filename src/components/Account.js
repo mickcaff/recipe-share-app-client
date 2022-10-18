@@ -1,6 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
-import { UserContext } from "../App";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import Page from "./Page";
 import { UseGlobalContext } from "./utils/context";
 
@@ -13,13 +11,6 @@ function Account() {
   });
   const isUserSignedIn = Object.keys(currentUser).length !== 0;
   const userSignUpDate = new Date(currentUser.date).getFullYear();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!isUserSignedIn) {
-      // navigate("/signin");
-    }
-  });
 
   const handleSignOut = () => {
     setCurrentUser({});
@@ -51,7 +42,9 @@ function Account() {
     return (
       <div className="account-form-div account-show-form">
         <form className="account-update-form">
-          <button className="account-exit-button"><i class="fa-solid fa-xl fa-xmark"></i></button>
+          <button className="account-exit-button">
+            <i class="fa-solid fa-xl fa-xmark"></i>
+          </button>
           <h1>Update Your Details</h1>
           <hr />
           <label>First Name</label>
